@@ -1,0 +1,521 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{titling}
+
+% -----------------------------------------------------
+% UCS503 Project Proposal
+% -----------------------------------------------------
+
+\definecolor{BattifyBlue}{HTML}{1E3A5F}
+\definecolor{BattifyAccent}{HTML}{D97706}
+
+\newcommand{\BvrHint}[1]{{\normalfont\normalsize\itshape\hfill #1}}
+
+\title{\textbf{BATTIFY}\\
+\large On-Demand Battery Delivery, Installation and Buyback Platform}
+
+\pretitle{\begin{center}\bfseries\fontsize{18bp}{22bp}\selectfont}
+\posttitle{\par\end{center}\vskip 0.5em}
+
+\author{
+Vyomesh Joshi, CSED\\
+Ph No: \texttt{6284329484}\\
+Roll No: \texttt{1024030181}\\
+Email: \texttt{vjoshi\_be24@thapar.edu}\\[4pt]
+Sarika Garg, CSED\\
+Ph No: \texttt{6284532323}\\
+Roll No: \texttt{1024030741}\\
+Email: \texttt{sgarg1\_be24@thapar.edu}\\[4pt]
+Shivinder Singh, CSED\\
+Ph No: \texttt{9653797001}\\
+Roll No: \texttt{1024030213}\\
+Email: \texttt{ssingh25\_be24@thapar.edu}\\[4pt]
+Yatish Goyal, CSED\\
+Ph No: \texttt{9888327011}\\
+Roll No: \texttt{1024030187}\\
+Email: \texttt{ygoyal\_be24@thapar.edu}
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\textbf{\color{BattifyAccent} Project Proposal for UCS503P -- Software Engineering Lab}\\
+Thapar Institute of Engineering and Technology
+\end{center}
+
+\section{Higher-order Goal \BvrHint{Real-world impact}}
+
+Battify aims to make battery replacement and servicing a fast, reliable and
+transparent service rather than a conventional retail purchase. The platform
+targets households, farmers, vehicle owners and small businesses that may need
+a replacement battery urgently but currently have to locate a retailer,
+arrange transportation, wait for availability and separately handle
+installation and disposal of the old battery.
+
+The engineering objective is to build a software system that coordinates
+customers, inventory, delivery personnel, installation and old-battery
+buyback through one workflow. The project therefore has a direct real-world
+use case while providing enough software complexity to demonstrate the
+learning outcomes of UCS503.
+
+\section{Problem Statement}
+
+Battery failure is often time-sensitive. A failed inverter battery can leave a
+household without backup power, while a failed tractor or agricultural pump
+battery can interrupt farm operations. Existing purchasing methods commonly
+separate the activities of finding a battery, checking availability,
+transporting it, installing it and disposing of the old unit.
+
+The major problems are:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Fragmented service:} battery purchase, delivery, installation
+    and old-battery disposal are handled separately.
+    \item \textbf{Uncertain availability:} customers may not know whether the
+    required battery is actually in stock nearby.
+    \item \textbf{Slow replacement:} urgent customers have limited options for
+    same-day delivery and installation.
+    \item \textbf{Poor workflow visibility:} customers often cannot track
+    whether an order has been accepted, dispatched or installed.
+    \item \textbf{Seasonal demand:} agricultural batteries experience demand
+    spikes around sowing and harvesting periods, making inventory planning
+    important.
+    \item \textbf{Battery waste:} customers need a convenient mechanism for
+    returning old batteries through a responsible recovery channel.
+\end{itemize}
+
+\section{Proposed Solution \BvrHint{Software Proposition}}
+
+Battify will be developed as a web-based platform connecting customers,
+inventory managers and delivery/installation agents.
+
+The proposed system will provide:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Battery catalogue:} customers can select battery type,
+    capacity, vehicle/application and preferred brand.
+    \item \textbf{Location-aware ordering:} the system records the delivery
+    location and identifies suitable nearby inventory.
+    \item \textbf{Inventory management:} administrators can monitor stock,
+    reserved units, low-stock products and seasonal demand.
+    \item \textbf{Delivery and installation workflow:} orders move through
+    defined states from placement to installation.
+    \item \textbf{Old-battery buyback:} the old battery is recorded and its
+    estimated buyback value is deducted from the order.
+    \item \textbf{Customer tracking:} customers can see order status and
+    installation progress.
+    \item \textbf{Operations dashboard:} administrators can monitor orders,
+    delivery times, stock levels and unresolved jobs.
+\end{itemize}
+
+\section{Core Workflow}
+
+The principal workflow is:
+
+\begin{enumerate}[leftmargin=0.7cm]
+    \item Customer selects the required battery and provides vehicle or
+    application details.
+    \item The system validates the request and checks inventory.
+    \item The customer selects a delivery location and preferred service slot.
+    \item An order is created and assigned an order ID.
+    \item The operations dashboard assigns the order to a delivery/installation
+    agent.
+    \item The agent collects or verifies the old battery, delivers the new
+    battery and performs installation.
+    \item The old battery is recorded for buyback/recycling.
+    \item The order is marked completed and the customer receives a final
+    status and invoice.
+\end{enumerate}
+
+\subsection{Order State Model}
+
+A controlled state machine can be used:
+
+\[
+\text{Placed}
+\rightarrow
+\text{Confirmed}
+\rightarrow
+\text{Assigned}
+\rightarrow
+\text{Dispatched}
+\rightarrow
+\text{Delivered}
+\rightarrow
+\text{Installed}
+\rightarrow
+\text{Completed}
+\]
+
+Exceptional states such as \textit{Cancelled}, \textit{Out of Stock} and
+\textit{Rescheduled} will also be supported.
+
+\section{Why This is Suitable for UCS503}
+
+Battify is intentionally designed as more than a simple e-commerce website.
+The core challenge is the coordination of multiple actors, inventory,
+geographical service, order states, installation and reverse logistics.
+
+This creates a practical software engineering problem involving:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item requirements elicitation and validation;
+    \item UML and workflow modelling;
+    \item modular system and database design;
+    \item architecture and API design;
+    \item software testing and verification;
+    \item Agile backlog and sprint management;
+    \item energy-aware software and UI decisions;
+    \item project scope, time and cost estimation.
+\end{itemize}
+
+\section{Mapping to Course Learning Outcomes}
+
+\begin{longtable}{p{0.19\textwidth}p{0.73\textwidth}}
+\toprule
+\textbf{CLO} & \textbf{How Battify Demonstrates the CLO} \\
+\midrule
+\textbf{CLO 1} &
+A software process model can be selected and justified for the project.
+An incremental/Agile approach is suitable because the system can be delivered
+in modules such as catalogue, ordering, inventory, dispatch and buyback.
+The project can compare Waterfall, Incremental and Agile approaches before
+selecting the final process. \\
+
+\textbf{CLO 2} &
+Requirements can be elicited from multiple stakeholders: customers,
+administrators, inventory managers, delivery agents and installation
+personnel. Use-case, activity, sequence, class and state diagrams can model
+the resulting requirements, followed by a formal SRS. \\
+
+\textbf{CLO 3} &
+The platform naturally supports separation of concerns between customer UI,
+operations dashboard, order management, inventory, dispatch and buyback.
+Database design, API design, MVC architecture, modularity, coupling and
+cohesion can all be demonstrated. \\
+
+\textbf{CLO 4} &
+The order lifecycle provides clear testable states and business rules.
+Unit tests can cover price calculation, inventory reservation and buyback
+calculation; integration tests can cover order-to-dispatch workflows; system
+tests can cover complete customer journeys. Black-box and white-box testing
+strategies can also be documented. \\
+
+\textbf{CLO 5} &
+The project can be managed through Agile user stories, product backlog,
+sprint backlog, story points, velocity and sprint reviews. UI sketches and
+story cards can be used before implementation, while Test Driven Development
+can be applied to critical modules. \\
+
+\bottomrule
+\end{longtable}
+
+\section{Requirements Engineering}
+
+\subsection{Stakeholders}
+
+The principal stakeholders are:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item Customer
+    \item Delivery and installation agent
+    \item Inventory manager
+    \item Operations administrator
+    \item Battery supplier
+    \item Buyback/recycling partner
+\end{itemize}
+
+\subsection{Representative Functional Requirements}
+
+\begin{enumerate}[leftmargin=0.7cm]
+    \item The system shall allow customers to browse battery products.
+    \item The system shall allow customers to submit a replacement request.
+    \item The system shall check inventory before confirming an order.
+    \item The system shall reserve inventory for confirmed orders.
+    \item The system shall assign an eligible service agent to an order.
+    \item The system shall maintain an auditable order-status history.
+    \item The system shall calculate the final amount after applicable buyback
+    credit.
+    \item The system shall allow administrators to update inventory.
+    \item The system shall provide customers with order tracking.
+    \item The system shall record completed installations and old-battery
+    collection.
+\end{enumerate}
+
+\subsection{Representative Non-functional Requirements}
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Performance:} common customer operations should respond
+    quickly under expected project-scale load.
+    \item \textbf{Usability:} the customer workflow should require minimal
+    steps and work well on mobile devices.
+    \item \textbf{Reliability:} order and inventory state changes should be
+    consistent and recoverable.
+    \item \textbf{Security:} authentication and role-based authorization
+    should protect administrative functions.
+    \item \textbf{Maintainability:} the backend should use modular components
+    with clear interfaces.
+    \item \textbf{Energy efficiency:} the UI should avoid unnecessary
+    animations, excessive polling and resource-heavy media.
+\end{itemize}
+
+\section{UML and System Modelling}
+
+The project will produce the following models:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Use-case diagram:} customer, agent and administrator
+    interactions.
+    \item \textbf{Activity diagram:} battery ordering and installation flow.
+    \item \textbf{Sequence diagram:} order creation, inventory validation and
+    agent assignment.
+    \item \textbf{Class diagram:} Customer, Order, Battery, InventoryItem,
+    Agent, Installation and Buyback entities.
+    \item \textbf{State diagram:} order lifecycle and exceptional states.
+    \item \textbf{ER diagram:} relational data model for users, products,
+    inventory, orders, payments and service records.
+    \item \textbf{Data Flow Diagram:} movement of information between
+    customers, system modules, administrators and service agents.
+\end{itemize}
+
+\section{Software Architecture}
+
+A three-tier architecture with MVC principles is proposed.
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Presentation layer:} responsive web interface for customers
+    and staff.
+    \item \textbf{Application layer:} REST APIs and business logic for
+    authentication, ordering, inventory, dispatch and buyback.
+    \item \textbf{Data layer:} relational database containing users, products,
+    inventory, orders, status history and service records.
+\end{itemize}
+
+The design will initially use a modular monolithic architecture rather than
+microservices. This keeps the educational project manageable while retaining
+clear module boundaries. The design can document how individual modules could
+later be separated if operational scale requires it.
+
+\section{Green Software Engineering}
+
+Green software is explicitly relevant to Battify because the course includes
+green coding, green architecture and energy-aware UI/UX.
+
+The project will incorporate:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item lightweight pages and optimized images;
+    \item reduced animations and unnecessary visual effects;
+    \item pagination instead of loading entire datasets;
+    \item indexed database queries for frequently accessed data;
+    \item caching of relatively static catalogue information;
+    \item event-driven updates where practical instead of aggressive polling;
+    \item efficient API payloads;
+    \item dark-mode support and reduced-power UI patterns;
+    \item monitoring of unnecessary CPU, memory and network consumption.
+\end{itemize}
+
+For the course report, these decisions can be evaluated as engineering
+trade-offs rather than simply being presented as visual features.
+
+\section{Software Design Principles}
+
+The system will demonstrate:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Separation of concerns:} UI, business logic and persistence
+    remain independently organized.
+    \item \textbf{Information hiding:} database implementation details remain
+    behind service/repository interfaces.
+    \item \textbf{High cohesion:} inventory operations are grouped within the
+    inventory module, while dispatch operations remain in the dispatch module.
+    \item \textbf{Low coupling:} modules communicate through well-defined APIs
+    and interfaces.
+    \item \textbf{Abstraction:} common operations such as order creation and
+    status transitions are represented through service-level abstractions.
+\end{itemize}
+
+\section{Testing and Verification}
+
+Testing will be planned alongside development.
+
+\subsection{Unit Testing}
+
+Examples include:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item buyback-credit calculation;
+    \item total-price calculation;
+    \item inventory availability checks;
+    \item order-state transition validation;
+    \item agent eligibility logic.
+\end{itemize}
+
+\subsection{Integration Testing}
+
+Examples include:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item customer order $\rightarrow$ inventory reservation;
+    \item inventory reservation $\rightarrow$ agent assignment;
+    \item completed installation $\rightarrow$ inventory update;
+    \item old-battery collection $\rightarrow$ buyback record.
+\end{itemize}
+
+\subsection{System and Acceptance Testing}
+
+A complete customer scenario will be tested from battery selection through
+order confirmation, delivery, installation, buyback and completion.
+
+Black-box test cases will validate expected user-visible behavior, while
+white-box testing will target important branches and business rules.
+
+\section{Agile Development Plan}
+
+The project can be organized into short sprints.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{0.17\textwidth}X}
+\toprule
+\textbf{Sprint} & \textbf{Deliverable} \\
+\midrule
+Sprint 1 & Requirements, stakeholder analysis, SRS outline and UI sketches. \\
+Sprint 2 & Authentication, customer catalogue and battery selection. \\
+Sprint 3 & Order creation, inventory and pricing modules. \\
+Sprint 4 & Agent assignment, delivery tracking and installation workflow. \\
+Sprint 5 & Buyback module, admin dashboard and notifications. \\
+Sprint 6 & Testing, debugging, green-software optimization and deployment. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+A product backlog will contain user stories such as:
+
+\begin{quote}
+As a customer, I want to see available batteries for my vehicle so that I
+can select a compatible replacement.
+\end{quote}
+
+\begin{quote}
+As an operations manager, I want to see low-stock batteries so that I can
+replenish inventory before demand causes service failures.
+\end{quote}
+
+\begin{quote}
+As a delivery agent, I want to see my assigned installations so that I can
+complete deliveries efficiently.
+\end{quote}
+
+\section{Evaluation Criteria}
+
+The system will be evaluated using measurable software and operational
+metrics:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item percentage of successful order submissions;
+    \item average API response time for core operations;
+    \item inventory consistency after concurrent order attempts;
+    \item percentage of test cases passed;
+    \item order completion rate in the simulated workflow;
+    \item average number of steps required to place an order;
+    \item reduction in unnecessary network requests after green-UI
+    optimization;
+    \item usability feedback from pilot users.
+\end{itemize}
+
+\section{Real-world Impact}
+
+Battify is intended to solve a real operational problem rather than being
+only a demonstration CRUD application. The platform can reduce the friction
+between battery failure and replacement by integrating discovery, stock
+verification, delivery, installation and old-battery recovery.
+
+The buyback component also gives the system a reverse-logistics dimension.
+Instead of treating the old battery as waste at the customer level, the
+software records its collection and creates a traceable handoff to the
+recovery/recycling process.
+
+The agricultural use case is particularly relevant to Punjab because the
+system can model seasonal inventory planning for tractor and pump batteries.
+This gives the project an opportunity to demonstrate demand-aware software
+rather than only static product ordering.
+
+\section{Project Scope}
+
+\subsection{Minimum Viable Product}
+
+The MVP will contain:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item customer registration/login;
+    \item battery catalogue;
+    \item compatibility and requirement form;
+    \item inventory database;
+    \item order creation;
+    \item buyback-credit calculation;
+    \item administrator dashboard;
+    \item delivery-agent assignment;
+    \item order-status timeline;
+    \item installation completion record;
+    \item unit and integration test suite.
+\end{itemize}
+
+\subsection{Future Extensions}
+
+Possible extensions include:
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item WhatsApp-based order intake;
+    \item route optimization for delivery agents;
+    \item demand forecasting for seasonal agricultural batteries;
+    \item automated compatibility recommendations;
+    \item supplier-side inventory integration;
+    \item predictive battery replacement reminders;
+    \item multi-city expansion;
+    \item dedicated mobile application.
+\end{itemize}
+
+\section{Risks and Mitigations}
+
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Scope creep:} restrict the assessed implementation to the
+    MVP and treat advanced features as future extensions.
+    \item \textbf{Battery compatibility errors:} require structured vehicle,
+    application and battery specifications rather than relying only on free
+    text.
+    \item \textbf{Inventory inconsistency:} use transactions and explicit
+    reservation states.
+    \item \textbf{Privacy and security:} collect only required customer
+    information and implement role-based access.
+    \item \textbf{Complex logistics:} simulate dispatch operations initially
+    instead of attempting a full commercial logistics network.
+\end{itemize}
+
+\section{Summary}
+
+Battify is proposed as an on-demand battery delivery, installation and
+buyback platform that combines e-commerce, inventory management, field
+service and reverse logistics.
+
+Its strongest value for UCS503 is that the project naturally covers the
+complete software engineering lifecycle: requirements engineering, UML
+modelling, SRS documentation, architecture and design, coding practices,
+testing, Agile development, project management and green software practices.
+
+The existing Battify website can serve as the initial product prototype,
+while the UCS503 lab implementation will focus on turning the concept into a
+well-engineered, testable and documented software system.
+
+\end{document}
