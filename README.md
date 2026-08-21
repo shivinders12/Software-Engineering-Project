@@ -1,4 +1,4 @@
-# 🔋 Battify
+# 🔋Software-Engineering-Project UCS503
 
 ### On-Demand Battery Delivery, Installation & Buyback Platform
 
