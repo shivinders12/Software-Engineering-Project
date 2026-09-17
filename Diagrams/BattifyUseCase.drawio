@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" agent="Claude">
+  <diagram name="Battify Use Case Diagram v2" id="battify-uc-diagram-v2">
+    <mxGraphModel dx="2520" dy="1263" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=16;align=center;spacingTop=8;" value="Battify System" vertex="1">
+          <mxGeometry height="760" width="1080" x="310" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Register / Login" vertex="1">
+          <mxGeometry height="70" width="200" x="350" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Browse Battery Catalogue" vertex="1">
+          <mxGeometry height="70" width="200" x="610" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Check Battery Compatibility" vertex="1">
+          <mxGeometry height="70" width="200" x="870" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Place Replacement Order" vertex="1">
+          <mxGeometry height="70" width="200" x="1130" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Check Inventory" vertex="1">
+          <mxGeometry height="70" width="200" x="370" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Select Delivery Location &amp; Service Slot" vertex="1">
+          <mxGeometry height="70" width="200" x="650" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="uc7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Track Order" vertex="1">
+          <mxGeometry height="70" width="200" x="920" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="uc8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Order Status" vertex="1">
+          <mxGeometry height="70" width="200" x="1170" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uc10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Assign Delivery Agent" vertex="1">
+          <mxGeometry height="70" width="200" x="350" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="uc11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Update Order Status" vertex="1">
+          <mxGeometry height="70" width="200" x="610" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="uc12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Perform Battery Installation" vertex="1">
+          <mxGeometry height="70" width="200" x="870" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="uc13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Record Old Battery" vertex="1">
+          <mxGeometry height="70" width="200" x="1130" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="uc9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage Inventory" vertex="1">
+          <mxGeometry height="70" width="200" x="350" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="uc16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage Products" vertex="1">
+          <mxGeometry height="70" width="200" x="610" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="uc14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Calculate Buyback Credit" vertex="1">
+          <mxGeometry height="70" width="200" x="870" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="uc15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage Buyback / Recycling" vertex="1">
+          <mxGeometry height="70" width="200" x="350" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="uc17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Operations Dashboard" vertex="1">
+          <mxGeometry height="70" width="200" x="610" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="uc18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Generate Invoice" vertex="1">
+          <mxGeometry height="70" width="200" x="870" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_customer" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" value="Customer" vertex="1">
+          <mxGeometry height="80" width="40" x="1450" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_agent" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" value="Delivery &amp; Installation Agent" vertex="1">
+          <mxGeometry height="80" width="40" x="1466" y="549" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_invmgr" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" value="Inventory Manager" vertex="1">
+          <mxGeometry height="80" width="40" x="90" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" value="Operations Administrator" vertex="1">
+          <mxGeometry height="80" width="40" x="690" y="796" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_supplier" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" value="Battery Supplier" vertex="1">
+          <mxGeometry height="80" width="40" x="170" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_buyback" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" value="Buyback / Recycling Partner" vertex="1">
+          <mxGeometry height="80" width="40" x="120" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="actor_customer" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="actor_customer" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="actor_customer" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="actor_customer" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="actor_customer" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="actor_agent" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="actor_agent" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="actor_agent" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="actor_invmgr" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="actor_invmgr" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="actor_invmgr" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="actor_admin" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="actor_admin" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="actor_admin" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="actor_supplier" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="actor_buyback" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;rounded=0;" target="uc15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc1" edge="1" parent="1" source="uc4" style="edgeStyle=none;html=1;dashed=1;endArrow=open;elbow=vertical;fontSize=10;" target="uc3" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc2" edge="1" parent="1" source="uc4" style="edgeStyle=none;html=1;dashed=1;endArrow=open;elbow=vertical;fontSize=10;" target="uc5" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc3" edge="1" parent="1" source="uc4" style="edgeStyle=none;html=1;dashed=1;endArrow=open;elbow=vertical;fontSize=10;" target="uc6" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc4" edge="1" parent="1" source="uc12" style="edgeStyle=none;html=1;dashed=1;endArrow=open;elbow=vertical;fontSize=10;" target="uc13" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc5" edge="1" parent="1" source="uc18" style="edgeStyle=none;html=1;dashed=1;endArrow=open;elbow=vertical;fontSize=10;" target="uc14" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext1" edge="1" parent="1" source="uc8" style="edgeStyle=none;html=1;dashed=1;endArrow=open;elbow=vertical;fontSize=10;" target="uc7" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

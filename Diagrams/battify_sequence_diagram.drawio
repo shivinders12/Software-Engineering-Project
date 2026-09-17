@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Battify - Sequence Diagram" id="sequenceDiagram1">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1120" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Battify - Order Creation &amp; Fulfillment (Sequence Diagram)" style="text;html=1;fontStyle=1;fontSize=16;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="5" width="700" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Object headers -->
+        <mxCell id="hC" value=": Customer" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hS" value=": Battify Platform (Order/Inventory/Buyback Service)" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hI" value=": Inventory Module" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hA" value=": Operations Admin / Dispatch" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="680" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hG" value=": Delivery/Installation Agent" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="900" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Lifelines -->
+        <mxCell id="lC" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="80" as="sourcePoint" /><mxPoint x="100" y="1090" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lS" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="80" as="sourcePoint" /><mxPoint x="320" y="1090" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lI" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="540" y="80" as="sourcePoint" /><mxPoint x="540" y="1090" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lA" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="760" y="80" as="sourcePoint" /><mxPoint x="760" y="1090" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lG" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="980" y="80" as="sourcePoint" /><mxPoint x="980" y="1090" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- alt combined fragment frame -->
+        <mxCell id="frameAlt" value="alt" style="rounded=0;whiteSpace=wrap;html=1;shape=umlFrame;fillColor=none;strokeColor=#000000;verticalAlign=top;align=left;fontStyle=1;width=60;height=30;" vertex="1" parent="1">
+          <mxGeometry x="20" y="260" width="1040" height="770" as="geometry" />
+        </mxCell>
+        <mxCell id="condAvail" value="[stock available]" style="text;html=1;align=left;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="265" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dividerElse" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="20" y="920" as="sourcePoint" /><mxPoint x="1060" y="920" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="condElse" value="[else: out of stock]" style="text;html=1;align=left;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="925" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Messages -->
+        <mxCell id="m1" value="1: selectBattery(type, capacity, vehicle, brand)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="120" as="sourcePoint" /><mxPoint x="320" y="120" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2: checkAvailability(battery, location)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="180" as="sourcePoint" /><mxPoint x="540" y="180" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3: availabilityResult" style="html=1;dashed=1;endArrow=open;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="540" y="230" as="sourcePoint" /><mxPoint x="320" y="230" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="m4" value="4: display available slots" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="300" as="sourcePoint" /><mxPoint x="100" y="300" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5: selectDeliveryLocation(location) &amp; slot" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="100" y="350" as="sourcePoint" /><mxPoint x="320" y="350" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6: reserveStock(battery)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="400" as="sourcePoint" /><mxPoint x="540" y="400" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7: stockReserved" style="html=1;dashed=1;endArrow=open;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="540" y="450" as="sourcePoint" /><mxPoint x="320" y="450" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="m8" value="8: createOrder() [generates Order ID]" style="html=1;endArrow=block;strokeColor=#000000;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="490" as="sourcePoint" />
+            <mxPoint x="320" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="490" />
+              <mxPoint x="400" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m9" value="9: assignAgent(order)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="560" as="sourcePoint" /><mxPoint x="760" y="560" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="10: notifyAssignment(order)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="760" y="610" as="sourcePoint" /><mxPoint x="980" y="610" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="11: acceptAssignment" style="html=1;dashed=1;endArrow=open;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="980" y="660" as="sourcePoint" /><mxPoint x="760" y="660" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="12: deliverAndInstallBattery()" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="980" y="710" as="sourcePoint" /><mxPoint x="100" y="710" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="13: recordOldBattery(buybackDetails)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="980" y="760" as="sourcePoint" /><mxPoint x="320" y="760" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="m14" value="14: calculateBuybackCredit &amp; finalInvoiceAmount()" style="html=1;endArrow=block;strokeColor=#000000;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="800" as="sourcePoint" />
+            <mxPoint x="320" y="830" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="420" y="800" />
+              <mxPoint x="420" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m15" value="15: orderCompleted(invoice)" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="870" as="sourcePoint" /><mxPoint x="100" y="870" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="m4a" value="4a: notifyOutOfStock()" style="html=1;endArrow=block;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="320" y="965" as="sourcePoint" /><mxPoint x="100" y="965" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

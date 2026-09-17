@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" agent="Antigravity" pages="1">
+  <diagram id="uctemp" name="Use Case Template">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="header" value="&lt;b&gt;Use Case Specification Template&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="250" y="40" width="300" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Background Frame -->
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="680" height="720" as="geometry" />
+        </mxCell>
+        
+        <!-- Rows -->
+        <mxCell id="r1_l" value="&lt;b&gt;Use Case ID&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_v" value="UC-01" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="100" width="480" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2_l" value="&lt;b&gt;Use Case Name&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_v" value="Request File Access with AI Check" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="140" width="480" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3_l" value="&lt;b&gt;Primary Actor&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3_v" value="Process / Application" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="480" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r4_l" value="&lt;b&gt;Description&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_v" value="A process attempts to access a file. The kernel intercepts, checks state, and uses AI service for decisions if state is unknown." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="220" width="480" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r5_l" value="&lt;b&gt;Pre-conditions&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_v" value="1. Kernel Security Layer is active.&lt;br&gt;2. AI Security Service is reachable." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="300" width="480" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r6_l" value="&lt;b&gt;Main Success Scenario&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r6_v" value="1. Process requests access to file.&lt;br&gt;2. Kernel intercepts request.&lt;br&gt;3. Kernel checks internal security records.&lt;br&gt;4. Kernel finds unknown/modified state.&lt;br&gt;5. Kernel sends file context to AI.&lt;br&gt;6. AI Service analyzes context (Safe).&lt;br&gt;7. AI returns Trusted decision.&lt;br&gt;8. Kernel updates file state to Trusted.&lt;br&gt;9. Kernel allows Process access." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="480" height="200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r7_l" value="&lt;b&gt;Alternative Flows&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="r7_v" value="3a. File already Trusted:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;1. Kernel skips AI, grants access immediately.&lt;br&gt;&lt;br&gt;6a. AI determines file is Suspicious:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;1. AI returns Restricted.&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;2. Kernel updates state to Restricted/Quarantined.&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;3. Kernel denies Process access." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="560" width="480" height="140" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="r8_l" value="&lt;b&gt;Post-conditions&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r8_v" value="1. Process is granted/denied access.&lt;br&gt;2. File state in Kernel is up-to-date." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="700" width="480" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="r9_l" value="&lt;b&gt;Exceptions&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="760" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r9_v" value="5a. AI Service Unreachable: Kernel defaults to safe policy (deny execution)." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="760" width="480" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

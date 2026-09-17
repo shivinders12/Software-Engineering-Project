@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Battify - Collaboration Diagram" id="collabDiagram1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="950" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Battify - Order Creation &amp; Fulfillment (Collaboration Diagram)" style="text;html=1;fontStyle=1;fontSize=16;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="650" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Objects -->
+        <mxCell id="oC" value=": Customer" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oS" value=": Battify Platform&#10;(Order / Inventory / Buyback Service)" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="370" y="290" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="oI" value=": Inventory Module" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="90" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oA" value=": Operations Admin / Dispatch" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="700" y="500" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oG" value=": Delivery/Installation Agent" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Links -->
+        <mxCell id="linkCS" value="1: selectBattery(type, capacity, vehicle, brand)&#10;4: displayAvailableSlots()&#10;5: selectDeliveryLocation(location) &amp; slot&#10;15: orderCompleted(invoice)&#10;4a: notifyOutOfStock()" style="html=1;endArrow=none;startArrow=none;strokeColor=#000000;fontSize=10;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oC" target="oS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="linkSI" value="2: checkAvailability(battery, location)&#10;3: availabilityResult&#10;6: reserveStock(battery)&#10;7: stockReserved" style="html=1;endArrow=none;startArrow=none;strokeColor=#000000;fontSize=10;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oS" target="oI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="linkSA" value="9: assignAgent(order)" style="html=1;endArrow=none;startArrow=none;strokeColor=#000000;fontSize=10;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oS" target="oA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="linkAG" value="10: notifyAssignment(order)&#10;11: acceptAssignment" style="html=1;endArrow=none;startArrow=none;strokeColor=#000000;fontSize=10;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oA" target="oG">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="linkGC" value="12: deliverAndInstallBattery()" style="html=1;endArrow=none;startArrow=none;strokeColor=#000000;fontSize=10;align=left;verticalAlign=top;" edge="1" parent="1" source="oG" target="oC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="linkGS" value="13: recordOldBattery(buybackDetails)" style="html=1;endArrow=none;startArrow=none;strokeColor=#000000;fontSize=10;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oG" target="oS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Self-link on System for internal operations -->
+        <mxCell id="linkSSelf" value="8: createOrder() [generates Order ID]&#10;14: calculateBuybackCredit &amp; finalInvoiceAmount()" style="html=1;endArrow=block;startArrow=none;strokeColor=#000000;fontSize=10;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="310" as="sourcePoint" />
+            <mxPoint x="590" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="300" />
+              <mxPoint x="660" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

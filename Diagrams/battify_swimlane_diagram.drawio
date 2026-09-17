@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Battify - Swimlane Diagram" id="swimlaneDiagram1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Lane backgrounds -->
+        <mxCell id="L1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="200" height="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="L2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="200" height="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="L3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6E0;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="200" height="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="L4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1E6F7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="200" height="1340" as="geometry" />
+        </mxCell>
+
+        <!-- Lane headers -->
+        <mxCell id="H1" value="Customer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#666666;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H2" value="System (Battify Platform)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BAD1F5;strokeColor=#666666;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H3" value="Operations Admin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE1A8;strokeColor=#666666;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H4" value="Delivery / Installation Agent" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4C7F1;strokeColor=#666666;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="760" y="40" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Nodes -->
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="125" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="Select battery, capacity &amp; vehicle/application details" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="170" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="Validate request &amp; check inventory availability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3366cc;" vertex="1" parent="1">
+          <mxGeometry x="290" y="280" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d1" value="In stock nearby?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="310" y="400" width="140" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notify" value="Send Out-of-Stock notification to customer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="290" y="530" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end_no" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="365" y="630" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c2" value="Select delivery location &amp; preferred service slot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="530" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2" value="Create order &amp; assign a unique Order ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3366cc;" vertex="1" parent="1">
+          <mxGeometry x="290" y="660" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a1" value="Assign order to a delivery/installation agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="530" y="770" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g1" value="Collect/verify old battery, deliver &amp; install new battery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="770" y="890" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g2" value="Record old battery for buyback / recycling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1020" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3" value="Calculate buyback credit &amp; final invoice amount; mark order Completed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3366cc;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1130" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c3" value="Receive final order status &amp; invoice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1260" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end1" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1360" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="start" target="c1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="c1" target="s1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s1" target="d1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="d1" target="notify"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="notify" target="end_no"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="d1" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="c2" target="s2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s2" target="a1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a1" target="g1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="g1" target="g2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="g2" target="s3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s3" target="c3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="c3" target="end1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
